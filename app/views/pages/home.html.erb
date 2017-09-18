@@ -3,9 +3,9 @@
             <div class="fs-hero hero-img" style="background-image:url(assets/images/bg-65.jpg)">
                 <div class="hero-caption center-left text-white">
                     <h2><%= @titre.html_safe %></h2>
-                    <p class="mrg-top-30"><%= @sous_titre %></p>
+                    <p class="mrg-top-30"><%= @sous_titre.html_safe %></p>
                     <div class="mrg-top-30">
-            <a class="btn btn-white btn-md">Study More</a>
+            <a class="btn btn-white btn-md"><%= @cta.html_safe %></a>
           </div>
                 </div>
             </div><!-- /hero-img -->
