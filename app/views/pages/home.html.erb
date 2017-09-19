@@ -6,14 +6,62 @@
       <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
     <% end %>
     <div class="hero-caption center-left text-white">
-      <h2><%= @titre.html_safe %></h2>
-      <p class="mrg-top-30"><%= @sous_titre.html_safe %></p>
+      <h2><%= sanitize @titre, tags: %w(strong em a), attributes: %w(href)%></h2>
+      <p class="mrg-top-30"><%= sanitize @sous_titre, tags: %w(strong em a), attributes: %w(href) %></p>
       <div class="mrg-top-30">
-        <a class="btn btn-white btn-md"><%= @cta.html_safe %></a>
+        <a class="btn btn-white btn-md"><%= sanitize @cta, tags: %w(strong em a), attributes: %w(href) %></a>
       </div>
     </div>
   </div><!-- /hero-img -->
 </section>
         <!-- Hero End -->
+<section class="section-1 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="features-block-3">
+          <i class="ei ei-insurance"></i>
+          <div class="features-info">
+            <h4 class="features-tittle"><%= sanitize @titre1_bloc1, tags: %w(strong em a), attributes: %w(href) %></h4>
+            <p><%= sanitize @texte1_bloc1, tags: %w(strong em a), attributes: %w(href) %></p>
+          </div><!-- /features-info -->
+        </div><!-- /features-block-3 -->
+      </div>
+      <div class="col-md-4">
+        <div class="features-block-3">
+          <i class="ei ei-folder-check"></i>
+          <div class="features-info">
+            <h4 class="features-tittle"><%= sanitize @titre2_bloc1, tags: %w(strong em a), attributes: %w(href) %></h4>
+            <p><%= sanitize @texte2_bloc1, tags: %w(strong em a), attributes: %w(href) %></p>
+          </div><!-- /features-info -->
+        </div><!-- /features-block-3 -->
+      </div>
+      <div class="col-md-4">
+        <div class="features-block-3">
+          <i class="ei ei-pencil"></i>
+          <div class="features-info">
+            <h4 class="features-tittle"><%= sanitize @titre3_bloc1, tags: %w(strong em a), attributes: %w(href) %></h4>
+            <p><%= sanitize @texte3_bloc1, tags: %w(strong em a), attributes: %w(href) %></p>
+          </div><!-- /features-info -->
+        </div><!-- /features-block-3 -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h2 class="mrg-btm-30 mrg-top-70"><%= sanitize @titre1_about1, tags: %w(strong em a), attributes: %w(href) %></h2>
+        <p class="mrg-btm-30"><%= sanitize @texte1_about1, tags: %w(strong em a), attributes: %w(href) %></p>
+      </div>
+      <div class="col-md-offset-1 col-md-5 image1_about1">
+        <%= @image1_about1.html_safe %>
+      </div>
+    </div>
+  </div>
+</section>
 
 
