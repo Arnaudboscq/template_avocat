@@ -16,12 +16,58 @@
           <%= f.text_area :titre, class: 'editable' %>
           <p class="mrg-top-30"><%= f.text_area :sous_titre, class: 'editable' %></p>
           <div class="mrg-top-30">
-            <a class="btn btn-white btn-md"></a>
-          </div>
+           <%= f.text_area :cta, class: 'editable' %>
         </div>
       </div><!-- /hero-img -->
     </section>
         <!-- Hero End -->
+
+    <section class="section-1 bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="features-block-3">
+              <i class="ei ei-insurance"></i>
+              <div class="features-info">
+                <h4 class="features-tittle"><%= f.text_area :titre1_bloc1, class: 'editable' %></h4>
+                <p><%= f.text_area :texte1_bloc1, class: 'editable' %></p>
+              </div><!-- /features-info -->
+            </div><!-- /features-block-3 -->
+          </div>
+          <div class="col-md-4">
+            <div class="features-block-3">
+              <i class="ei ei-folder-check"></i>
+              <div class="features-info">
+                <h4 class="features-tittle"><%= f.text_area :titre2_bloc1, class: 'editable' %></h4>
+                <p><%= f.text_area :texte2_bloc1, class: 'editable' %></p>
+              </div><!-- /features-info -->
+            </div><!-- /features-block-3 -->
+          </div>
+          <div class="col-md-4">
+            <div class="features-block-3">
+              <i class="ei ei-pencil"></i>
+              <div class="features-info">
+                <h4 class="features-tittle"><%= f.text_area :titre3_bloc1, class: 'editable' %></h4>
+                <p><%= f.text_area :texte3_bloc1, class: 'editable' %></p>
+              </div><!-- /features-info -->
+            </div><!-- /features-block-3 -->
+          </div>
+        </div>
+      </div>
+     </section>
+     <section class="section-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h2 class="mrg-btm-30 mrg-top-70"><%= f.text_area :titre1_about1, class: 'editable' %></h2>
+            <p class="mrg-btm-30"><%= f.text_area :texte1_about1, class: 'editable' %></p>
+          </div>
+          <div class="col-md-offset-1 col-md-5">
+            <%= f.text_area :image1_about1, class: 'editable' %>
+          </div>
+        </div>
+      </div>
+    </section>
     <%= f.button :submit %>
   </div>
 <% end %>

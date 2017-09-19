@@ -25,7 +25,6 @@ class HomesController < ApplicationController
   # POST /homes.json
   def create
     @home = Home.new(home_params)
-
     respond_to do |format|
       if @home.save
         format.html { redirect_to @home, notice: 'Home was successfully created.' }

@@ -1,5 +1,7 @@
 {
   "name": "template_avocat",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "medium-editor-insert-plugin": "^2.4.1"
+  }
 }
