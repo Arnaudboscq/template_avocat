@@ -16,8 +16,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'devise'
-gem 'rails-html-sanitizer'
-gem 'redactor-rails'
+
 
 
 group :development, :test do
