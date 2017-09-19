@@ -5,6 +5,23 @@
   </div>
 
   <div class="form-actions">
+   <!-- Hero Start -->
+    <section id="hero">
+      <div class="fs-hero hero-img">
+        <% if current_user && current_user.admin? %>
+          <%= link_to "Revenir à la vue", root_path, class: "btn btn-white btn-md" %>
+          <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
+        <% end %>
+        <div class="hero-caption center-left text-white">
+          <%= f.text_area :titre, class: 'editable' %>
+          <p class="mrg-top-30"><%= f.text_area :sous_titre, class: 'editable' %></p>
+          <div class="mrg-top-30">
+            <a class="btn btn-white btn-md"></a>
+          </div>
+        </div>
+      </div><!-- /hero-img -->
+    </section>
+        <!-- Hero End -->
     <%= f.button :submit %>
   </div>
 <% end %>
