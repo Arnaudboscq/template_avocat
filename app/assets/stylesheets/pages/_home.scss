@@ -2428,7 +2428,7 @@ h6 a {
 }
 
 .bg-white {
-    background-color: #000 !important;
+    background-color: #fff !important;
 }
 
 .bg-gray {
@@ -7551,6 +7551,7 @@ section {
 }
 
 .hero-img {
+    background-image: url("bg-bordeaux.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
