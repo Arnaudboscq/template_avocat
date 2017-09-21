@@ -1,8 +1,9 @@
-        <!-- Hero Start -->
+<!-- Hero Start -->
 <section id="hero">
   <div class="fs-hero hero-img">
     <% if current_user && current_user.admin? %>
       <%= link_to "Editer la page", edit_home_path(@home), class: "btn btn-white btn-md" %>
+      <%= link_to "FAQ", faq_path, class: "btn btn-white btn-md" %>
       <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
     <% end %>
     <div class="hero-caption center-left text-white">
@@ -12,9 +13,11 @@
         <a class="btn btn-white btn-md"><%= sanitize @cta, tags: %w(strong em a), attributes: %w(href) %></a>
       </div>
     </div>
-  </div><!-- /hero-img -->
+  </div>
 </section>
-        <!-- Hero End -->
+<!-- Hero End -->
+
+
 <section class="section-1 bg-gray">
   <div class="container">
     <div class="row">
@@ -57,11 +60,21 @@
         <h2 class="mrg-btm-30 mrg-top-70"><%= sanitize @titre1_about1, tags: %w(strong em a), attributes: %w(href) %></h2>
         <p class="mrg-btm-30"><%= sanitize @texte1_about1, tags: %w(strong em a), attributes: %w(href) %></p>
       </div>
-      <div class="col-md-offset-1 col-md-5 image1_about1">
+      <div class="col-md-offset-1 col-md-5">
         <%= @image1_about1.html_safe %>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Promo Start -->
+<section class="section-3 bg fixed-bg dark-overlay" style="background-image:url(assets/images/bg-32.jpg)">
+  <div class="container">
+    <div class="text-center">
+      <h1><span class="font-weight-light"><%= sanitize @cta1, tags: %w(strong em a), attributes: %w(href) %></h1>
+    </div>
+  </div>
+</section>
+<!-- Promo End -->
 
 
