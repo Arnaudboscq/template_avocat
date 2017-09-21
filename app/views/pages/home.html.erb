@@ -2,8 +2,8 @@
 <section id="hero">
   <div class="fs-hero hero-img">
     <% if current_user && current_user.admin? %>
+      <%= link_to "FAQ", pages_faq_path, class: "btn btn-white btn-md" %>
       <%= link_to "Editer la page", edit_home_path(@home), class: "btn btn-white btn-md" %>
-      <%= link_to "FAQ", faq_path, class: "btn btn-white btn-md" %>
       <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
     <% end %>
     <div class="hero-caption center-left text-white">
@@ -16,7 +16,6 @@
   </div>
 </section>
 <!-- Hero End -->
-
 
 <section class="section-1 bg-gray">
   <div class="container">
@@ -52,7 +51,6 @@
   </div>
 </section>
 
-
 <section class="section-1">
   <div class="container">
     <div class="row">
@@ -76,5 +74,3 @@
   </div>
 </section>
 <!-- Promo End -->
-
-

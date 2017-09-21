@@ -7557,6 +7557,15 @@ section {
     background-repeat: no-repeat;
 }
 
+.hero-faq {
+    background-image: url("herofaq.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+}
+
 .hero-caption,
 .page-cover .cover-caption {
     position: absolute !important;
