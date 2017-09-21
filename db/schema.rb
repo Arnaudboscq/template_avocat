@@ -10,10 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919145619) do
+ActiveRecord::Schema.define(version: 20170921102910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "faqs", force: :cascade do |t|
+    t.string "titre1_bloc1"
+    t.string "titre1_bloc2"
+    t.string "titre1_bloc3"
+    t.string "titre1_bloc4"
+    t.string "question1_bloc1"
+    t.string "question2_bloc1"
+    t.string "question3_bloc1"
+    t.string "question4_bloc1"
+    t.string "question1_bloc2"
+    t.string "question2_bloc2"
+    t.string "question3_bloc2"
+    t.string "question4_bloc2"
+    t.string "question1_bloc3"
+    t.string "question2_bloc3"
+    t.string "question3_bloc3"
+    t.string "question4_bloc3"
+    t.string "question1_bloc4"
+    t.string "question2_bloc4"
+    t.string "question3_bloc4"
+    t.string "question4_bloc4"
+    t.string "reponse1_bloc1"
+    t.string "reponse2_bloc1"
+    t.string "reponse3_bloc1"
+    t.string "reponse4_bloc1"
+    t.string "reponse1_bloc2"
+    t.string "reponse2_bloc2"
+    t.string "reponse3_bloc2"
+    t.string "reponse4_bloc2"
+    t.string "reponse1_bloc3"
+    t.string "reponse2_bloc3"
+    t.string "reponse3_bloc3"
+    t.string "reponse4_bloc3"
+    t.string "reponse1_bloc4"
+    t.string "reponse2_bloc4"
+    t.string "reponse3_bloc4"
+    t.string "reponse4_bloc4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "homes", force: :cascade do |t|
     t.string "titre"
