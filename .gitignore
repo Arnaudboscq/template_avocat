@@ -5,6 +5,11 @@ tmp/*
 *.swp
 .DS_Store
 public/assets
+.env
 
 # Ignore application configuration
 /config/application.yml
+/config/cloudinary.yml
+/config/secrets.yml
+
+

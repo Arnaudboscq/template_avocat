@@ -7,7 +7,8 @@
   <div class="form-actions">
    <!-- Hero Start -->
     <section id="hero">
-      <div class="fs-hero hero-img">
+        <div class="fs-hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @home.hero1_image1 %>')">
         <% if current_user && current_user.admin? %>
           <%= link_to "Revenir à la vue", root_path, class: "btn btn-white btn-md" %>
           <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
@@ -19,6 +20,8 @@
            <%= f.text_area :cta, class: 'editable' %>
         </div>
       </div><!-- /hero-img -->
+      <%= f.input :hero1_image1, :label => "Image Hero Background" %>
+      <%= f.input :hero1_image1_cache, as: :hidden %>
     </section>
         <!-- Hero End -->
 
@@ -63,12 +66,17 @@
             <p class="mrg-btm-30"><%= f.text_area :texte1_about1, class: 'editable' %></p>
           </div>
           <div class="col-md-offset-1 col-md-5">
-            <%= f.text_area :image1_about1, class: 'editable' %>
+           <%= cl_image_tag(@home.image1_about1, :quality=>"auto") %>
+            <%= f.input :image1_about1, :label => "Image about" %>
+            <%= f.input :image1_about1_cache, as: :hidden %>
           </div>
         </div>
       </div>
     </section>
-    <section class="section-3 bg fixed-bg dark-overlay" style="background-image:url(assets/images/bg-32.jpg)">
+    <section class="section-3 bg fixed-bg dark-overlay" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @home.bg_cta1 %>')">
+       <%= f.input :bg_cta1, :label => "Background CTA" %>
+       <%= f.input :bg_cta1_cache, as: :hidden %>
       <div class="container">
         <div class="text-center">
           <h1><span class="font-weight-light"><%= f.text_area :cta1, class: 'editable' %></h1>
