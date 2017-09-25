@@ -1,10 +1,13 @@
 <!-- Hero Start -->
 <section id="hero">
-  <div class="fs-hero hero-img">
+  <div class="fs-hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @home.hero1_image1 %>')">
     <% if current_user && current_user.admin? %>
       <%= link_to "FAQ", pages_faq_path, class: "btn btn-white btn-md" %>
       <%= link_to "Editer la page", edit_home_path(@home), class: "btn btn-white btn-md" %>
       <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
+    <% else %>
+     <%= link_to('Login', new_user_session_path)  %>
     <% end %>
     <div class="hero-caption center-left text-white">
       <h2><%= sanitize @titre, tags: %w(strong em a), attributes: %w(href)%></h2>
@@ -61,14 +64,15 @@
         <p class="mrg-btm-30"><%= sanitize @texte1_about1, tags: %w(strong em a), attributes: %w(href) %></p>
       </div>
       <div class="col-md-offset-1 col-md-5">
-        <%= @image1_about1.html_safe %>
+        <%= cl_image_tag(@home.image1_about1, :quality=>"auto") %>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Promo Start -->
-<section class="section-3 bg fixed-bg dark-overlay" style="background-image:url(assets/images/bg-32.jpg)">
+<section class="section-3 bg fixed-bg dark-overlay" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @home.bg_cta1 %>')">
   <div class="container">
     <div class="text-center">
       <h1><span class="font-weight-light"><%= sanitize @cta1, tags: %w(strong em a), attributes: %w(href) %></h1>

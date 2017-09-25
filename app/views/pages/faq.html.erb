@@ -1,6 +1,7 @@
 
   <section id=hero>
-  <div class=" hero-faq">
+  <div class=" hero-faq" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @faq.hero1_image1 %>')">
     <% if current_user && current_user.admin? %>
   <%= link_to "Home", root_path, class: "btn btn-white btn-md" %>
       <%= link_to "Editer la page", edit_faq_path(@faq), class: "btn btn-white btn-md" %>

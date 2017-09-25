@@ -5,16 +5,22 @@
   </div>
 
   <div class="form-actions">
-        <section class="page-tittle page-tittle-lg parallax-bg dark-overlay">
-      <img class="parallax-img no-mobile-parallax" src="assets/images/bg-18.jpg" alt="" data-parallax='{"y": 150}'>
-      <div class="container">
-        <div class="page-tittle-head">
-          <h2><%= f.text_area :titre1, class: 'editable' %></h2>
-          <p><%= f.text_area :sous_titre1, class: 'editable' %></p>
-        </div>
-      </div>
-    </section>
+
         <!-- Page Tittle End -->
+
+  <section id=hero>
+  <div class=" hero-faq" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @faq.hero1_image1 %>')">
+    <div class="hero-caption center-left text-white">
+      <h2><%= f.text_area :titre1, class: 'editable' %></h2>
+      <p class="mrg-top-30"><%= f.text_area :sous_titre1, class: 'editable' %></p>
+    </div>
+    <%= f.input :hero1_image1, :label => "Image Hero Background" %>
+  <%= f.input :hero1_image1_cache, as: :hidden %>
+  </div>
+</section>
+
+
 
 
         <!-- Media Start -->

@@ -7468,6 +7468,9 @@ section {
 .fs-hero {
     height: 100vh;
     position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .fs-hero.hero-slider .swiper-container {
@@ -7550,15 +7553,9 @@ section {
     }
 }
 
-.hero-img {
-    background-image: url("bg-bordeaux.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+
 
 .hero-faq {
-    background-image: url("herofaq.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
