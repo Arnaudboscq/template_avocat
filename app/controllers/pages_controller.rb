@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @cta = @home.cta
     @cta1 = @home.cta1
     @titre1_bloc1 = @home.titre1_bloc1
-    @titre3_bloc1 = @home.titre2_bloc1
+    @titre2_bloc1 = @home.titre2_bloc1
     @titre3_bloc1 = @home.titre3_bloc1
     @texte1_bloc1 = @home.texte1_bloc1
     @texte2_bloc1 = @home.texte2_bloc1
