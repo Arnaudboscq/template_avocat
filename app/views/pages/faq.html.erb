@@ -2,11 +2,6 @@
   <section id=hero>
   <div class=" hero-faq" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
          url('<%= cl_image_path @faq.hero1_image1 %>')">
-    <% if current_user && current_user.admin? %>
-  <%= link_to "Home", root_path, class: "btn btn-white btn-md" %>
-      <%= link_to "Editer la page", edit_faq_path(@faq), class: "btn btn-white btn-md" %>
-      <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
-    <% end %>
     <div class="hero-caption center-left text-white">
       <h2><%= sanitize @titre1, tags: %w(strong em a), attributes: %w(href)%></h2>
       <p class="mrg-top-30"><%= sanitize @sous_titre1, tags: %w(strong em a), attributes: %w(href) %></p>

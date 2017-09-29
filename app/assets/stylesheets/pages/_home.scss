@@ -2469,7 +2469,7 @@ section {
 }
 
 .section-1 {
-    padding: 120px 0px;
+    padding: 50px 0px;
 }
 
 .section-2 {
@@ -7466,7 +7466,7 @@ section {
 --------------------------------*/
 
 .fs-hero {
-    height: 100vh;
+    height: 80vh;
     position: relative;
     background-size: cover;
     background-position: center center;
@@ -8699,6 +8699,7 @@ section {
 }
 
 .btn.btn-md {
+    border-radius: 4px;
     padding: 7px 25px;
     font-size: 16px;
 }
@@ -8737,7 +8738,7 @@ section {
 
 .btn-white:hover,
 .btn-white:focus {
-    color: #fff;
+   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-white-inverse {
@@ -12298,18 +12299,15 @@ h5.heading-1.second-line:after {
 
 .panel .panel-title > a:after {
     position: absolute;
-    content: "\e199";
-    font-family: "exclusive-icon";
-    right: 20px;
-    font-size: 10px;
-    padding: 3px 4.5px;
-    border-radius: 50px;
-    background-color: #333743;
-    color: #fff;
+    content: "\f056";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+    padding-left: 10px;
+
 }
 
 .panel .panel-title > a.collapsed:after {
-    content: "\e19b";
+    content: "\f055";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
 }
 
 .panel .panel-body {
@@ -13863,5 +13861,91 @@ h5.heading-1.second-line:after {
     margin-right: 30px;
 }
 
+
+
+
+
+
+
+
+
+
+/* Main navbar */
+.navbar-wagon {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-wagon-brand img {
+  height: 50px;
+}
+
+/* User Avatar */
+.navbar-wagon .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Right section */
+.navbar-wagon-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Basic navbar item */
+.navbar-wagon-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Navbar link */
+.navbar-wagon-link {
+  color: #616668;
+  font-size: 14px;
+}
+.navbar-wagon-link:hover {
+  color: #da552f;
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+.navbar-wagon-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-wagon-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-wagon-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-wagon-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
 
 /*# sourceMappingURL=main.css.map */
