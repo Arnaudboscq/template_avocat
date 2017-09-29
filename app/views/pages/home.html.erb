@@ -2,18 +2,15 @@
 <section id="hero">
   <div class="fs-hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
          url('<%= cl_image_path @home.hero1_image1 %>')">
-    <% if current_user && current_user.admin? %>
-      <%= link_to "FAQ", pages_faq_path, class: "btn btn-white btn-md" %>
-      <%= link_to "Editer la page", edit_home_path(@home), class: "btn btn-white btn-md" %>
-      <%= link_to "Logout", destroy_user_session_path, class: "btn btn-white btn-danger" %>
-    <% else %>
-     <%= link_to('Login', new_user_session_path)  %>
-    <% end %>
     <div class="hero-caption center-left text-white">
       <h2><%= sanitize @titre, tags: %w(strong em a), attributes: %w(href)%></h2>
-      <p class="mrg-top-30"><%= sanitize @sous_titre, tags: %w(strong em a), attributes: %w(href) %></p>
-      <div class="mrg-top-30">
+      <p class="mrg-top-10"><%= sanitize @sous_titre, tags: %w(strong em a), attributes: %w(href) %></p>
+      <div class="mrg-top-50">
         <a class="btn btn-white btn-md"><%= sanitize @cta, tags: %w(strong em a), attributes: %w(href) %></a>
+      </div>
+      <div>
+        <p>66 Avenue de Verdun, 33610 Cestas & 4 rue des Castaings, 33470 Le Teich
+           </br>Tél.: 05 56 36 54 28 - Mail : annick.batbare@laposte.net</p>
       </div>
     </div>
   </div>
@@ -25,7 +22,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="features-block-3">
-          <i class="ei ei-insurance"></i>
+          <i class="fa fa-gavel" aria-hidden="true"></i>
           <div class="features-info">
             <h4 class="features-tittle">
 
@@ -36,7 +33,7 @@
       </div>
       <div class="col-md-4">
         <div class="features-block-3">
-          <i class="ei ei-folder-check"></i>
+          <i class="fa fa-book" aria-hidden="true"></i>
           <div class="features-info">
             <h4 class="features-tittle"><%= sanitize @titre2_bloc1, tags: %w(strong em a), attributes: %w(href) %></h4>
             <p><%= sanitize @texte2_bloc1, tags: %w(strong em a), attributes: %w(href) %></p>
@@ -45,7 +42,7 @@
       </div>
       <div class="col-md-4">
         <div class="features-block-3">
-          <i class="ei ei-pencil"></i>
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
           <div class="features-info">
             <h4 class="features-tittle"><%= sanitize @titre3_bloc1, tags: %w(strong em a), attributes: %w(href) %></h4>
             <p><%= sanitize @texte3_bloc1, tags: %w(strong em a), attributes: %w(href) %></p>
@@ -55,6 +52,8 @@
     </div>
   </div>
 </section>
+
+
 
 <section class="section-1">
   <div class="container">
@@ -79,4 +78,5 @@
     </div>
   </div>
 </section>
+
 <!-- Promo End -->

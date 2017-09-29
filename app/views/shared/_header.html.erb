@@ -1,0 +1,26 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <%= cl_image_tag("Capture_d_écran_2017-09-28_à_17.25.05_atfsiq.png") %>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <div style="padding-left: 30px"><%= link_to "LES CABINETS", pages_faq_path %></div>
+    <div style="padding-left: 30px"><%= link_to "CONTACT", pages_faq_path %></div>
+    <div style="padding-left: 30px"><%= link_to "FAQ", pages_faq_path %></div>
+
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <% if current_user && current_user.admin? %>
+        <%= link_to "LOGOUT", destroy_user_session_path %>
+      <% else %>
+      <% end %>
+    </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  </div>
+</div>
+
